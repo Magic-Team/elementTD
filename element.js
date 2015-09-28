@@ -6,7 +6,7 @@ window.onload = function()
 {
 myCanvas = document.getElementById("mon_canvas");
 myContext = myCanvas.getContext("2d");
-var worldMap = new myWorld();
+worldMap = new myWorld();
 drawMap();
 }
 
@@ -20,13 +20,14 @@ function myWorld() {
 
 function drawMap() {
 	console.log(worldMap);
-	for (x=0;x<20;x++)
-	{
-		for (y=0;y<20;y++){
-			//myContext.drawImage(worldMap.mapData.terrain[x][y],10,10)
-		}
+	worldMap.mapTile.onload = function(){
+		for (x=0;x<20;x++)
+		{
+			for (y=0;y<20;y++){
+				myContext.drawImage(worldMap.mapTile,32*worldMap.mapData.terrain[y][x],32*worldMap.mapData.terrain[y][x],32,32,32*x,32*y,32,32);//img,sx,sy,swidth,sheight,x,y,width,height
+			}
+		}	
 	}
-	
 }
 
 function getMap(map){
