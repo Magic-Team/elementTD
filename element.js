@@ -24,7 +24,7 @@ function drawMap() {
 		for (x=0;x<20;x++)
 		{
 			for (y=0;y<20;y++){
-				myContext.drawImage(worldMap.mapTile,32*worldMap.mapData.terrain[y][x],32*worldMap.mapData.terrain[y][x],32,32,32*x,32*y,32,32);//img,sx,sy,swidth,sheight,x,y,width,height
+				myContext.drawImage(worldMap.mapTile,32*worldMap.mapData.terrain[y][x],32*worldMap.mapData.terrain[y][x],32,32,32*x,32*y,32,32);// img,sx,sy,swidth,sheight,x,y,width,height
 			}
 		}	
 	}
