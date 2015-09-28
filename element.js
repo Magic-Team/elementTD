@@ -11,14 +11,15 @@ drawMap();
 }
 
 function myWorld() {
-	console.log('My world');
-	var mapData = getMap("level_1");
-	var mapTile = new Image();
-	mapTile.src = "tileset/"+mapData.tileset
-	console.log(mapTile);
+	var mapTile;
+	var mapData;
+	this.mapData = getMap("level_1");
+	this.mapTile = new Image();
+	this.mapTile.src = "tileset/"+this.mapData.tileset
 }
 
 function drawMap() {
+	console.log(worldMap);
 	for (x=0;x<20;x++)
 	{
 		for (y=0;y<20;y++){
